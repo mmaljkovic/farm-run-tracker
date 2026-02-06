@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1c1810 0%, #13110c 100%);
+  color: #d4c4a0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2a241c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5c4d3c;
+  border-radius: 5px;
+  border: 2px solid #2a241c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9aa58;
+}
+
+@layer components {
+  .card {
+    @apply bg-rs-brown rounded border-2 border-rs-border p-4;
+    background: linear-gradient(180deg, #3e3529 0%, #2a241c 100%);
+    box-shadow: inset 0 1px 0 rgba(201, 170, 88, 0.1), 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-highlight {
+    @apply border-rs-gold;
+    box-shadow: inset 0 1px 0 rgba(201, 170, 88, 0.3), 0 0 20px rgba(201, 170, 88, 0.2);
+  }
+
+  .btn-primary {
+    @apply bg-rs-green hover:bg-rs-green-light text-rs-parchment font-medium py-2 px-4 rounded border border-rs-border transition-all;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-secondary {
+    @apply bg-rs-brown-light hover:bg-rs-brown text-rs-tan font-medium py-2 px-4 rounded border border-rs-border transition-all;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-gold {
+    @apply bg-gradient-to-b from-rs-gold to-rs-gold-dark hover:from-rs-gold-light hover:to-rs-gold text-rs-brown-dark font-semibold py-2 px-4 rounded border border-rs-gold-dark transition-all;
+    text-shadow: none;
+  }
+
+  .input {
+    @apply bg-rs-brown-dark border-2 border-rs-border rounded px-3 py-2 text-rs-parchment focus:outline-none focus:border-rs-gold;
+  }
+
+  .progress-bar {
+    @apply h-3 bg-rs-brown-dark rounded-sm overflow-hidden border border-rs-border;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-rs-green to-rs-green-light transition-all duration-300;
+  }
+
+  .rs-panel {
+    background: linear-gradient(180deg, #3e3529 0%, #2a241c 100%);
+    border: 2px solid #4a4035;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(201, 170, 88, 0.1), 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .rs-header {
+    background: linear-gradient(180deg, #4a4035 0%, #3e3529 100%);
+    border-bottom: 2px solid #4a4035;
+  }
+
+  .rs-gold-text {
+    @apply text-rs-gold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  .rs-divider {
+    @apply border-t-2 border-rs-border;
+    box-shadow: 0 1px 0 rgba(201, 170, 88, 0.1);
+  }
+}
