@@ -6,7 +6,7 @@ interface StageIndicatorProps {
   className?: string;
 }
 
-const stages: AnimalStage[] = ['egg', 'baby', 'adolescent', 'adult', 'elder'];
+const stages: AnimalStage[] = ['egg', 'child', 'adolescent', 'adult', 'elder'];
 
 export function StageIndicator({ currentStage, className = '' }: StageIndicatorProps) {
   const currentIndex = stages.indexOf(currentStage);

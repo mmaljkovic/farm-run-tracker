@@ -23,7 +23,6 @@ const createInitialPatches = (): PlantedPatch[] => {
 // - Adds new patches that don't exist in storage
 // - Removes patches that no longer exist in PATCH_LOCATIONS
 const syncPatchesWithLocations = (storedPatches: PlantedPatch[]): PlantedPatch[] => {
-  const locationIds = new Set(PATCH_LOCATIONS.map((l) => l.id));
   const storedPatchMap = new Map(storedPatches.map((p) => [p.patchLocationId, p]));
 
   return PATCH_LOCATIONS.map((location) => {
